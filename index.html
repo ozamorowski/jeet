@@ -30,6 +30,17 @@
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
         <!--<![endif]-->
-        <script src="js/minified.js"></script>
+        <script src="js/vendor/jquery.placeholder.min.js"></script>
+        <script>
+            $(function(){
+                $('input, textarea').placeholder();
+                $('.chromeframe').on('click', function() {
+                    $(this).slideUp('fast');
+                });
+                $('.hamburger > button').click(function() {
+                    $('.hamburger > nav').toggle();
+                });
+            });
+        </script>
     </body>
 </html>
