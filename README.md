@@ -34,13 +34,23 @@ In the example above, Jeet will be [implicitly included](https://github.com/mojo
 ```
 
 ####Syntax Quick Reference
-[https://github.com/mojotech/jeet/blob/master/jeet/index.styl](https://github.com/mojotech/jeet/blob/master/jeet/index.styl)
+[https://github.com/mojotech/jeet/blob/master/lib/index.styl](https://github.com/mojotech/jeet/blob/master/lib/index.styl)
 
 ####HTML Boilerplate
 [https://github.com/mojotech/jeet-html](https://github.com/mojotech/jeet-html)
 
 ####Roots Integration
 [https://github.com/mojotech/jeet-roots](https://github.com/mojotech/jeet-roots)
+
+####How to Install/Use Jeet in Rails 4 Asset Pipeline
+- Install [NodeJS](http://nodejs.org) on your development machine
+- Append `gem 'stylus', :git => 'git@github.com:lucasmazza/ruby-stylus.git'` to your `Gemfile`
+- `bundle`
+- `npm install jeet`
+- Add `Stylus.use('jeet') if defined? (Stylus)` to `config/application.rb` inside your `class Application`
+- Create and edit `custom.css.styl` in `app/assets/stylesheets`
+- `rails s`
+- Enjoy. Heroku's [Cedar Stack](https://devcenter.heroku.com/articles/cedar#polyglot-platform) supports Rails and Node out of the box. Nice.
 
 ####Help! npm is throwing permission errors!
 You're probably trying to `sudo` everything aren't you? That's bad juju! `sudo chown -R $USER /usr/local` will fix this. You might be interested in reinstalling all your global npm packages without sudo as well. Don't believe us? Here's a [blog post](http://howtonode.org/introduction-to-npm) on the subject by the maintainer of npm himself.
